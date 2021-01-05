@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "tsc src/index.ts --outDir lib/ && node lib/index.js",
     "test": "jest"
   },
   "repository": {
