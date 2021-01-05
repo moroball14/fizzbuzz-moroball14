@@ -7,9 +7,7 @@ const CounterMock = Counter as jest.Mock;
 
 test("count 1 to 100", () => {
   const arr1_100 = Array.from(new Array(100).keys()).map((i)=> i + 1);
-  const counter = new Counter();
-  const return_ary = counter.oneToHundred();
-
+  
   CounterMock.mockImplementationOnce(() => {
     return {
       oneToHundred(): number[]{
@@ -18,6 +16,9 @@ test("count 1 to 100", () => {
       }
     }
   });
+
+  const counter = new CounterMock();
+  const return_ary = counter.oneToHundred();
 
   expect(CounterMock).toHaveBeenCalled();
   expect(console.log).toBeCalled();
