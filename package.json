@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moroball14/fizzbuzz-moroball14.git"
+  },
+  "jest": {
+    "verbose": true
   },
   "keywords": [],
   "author": "",
@@ -18,7 +21,10 @@
   },
   "homepage": "https://github.com/moroball14/fizzbuzz-moroball14#readme",
   "devDependencies": {
+    "@types/jest": "^26.0.19",
     "@types/node": "^14.14.20",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
   }
