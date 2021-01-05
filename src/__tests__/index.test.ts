@@ -1,6 +1,7 @@
 import { Counter } from '../index';
 
-test('test', () => {
+test('count 1 to 100', () => {
   const arr1_100 = Array.from(new Array(100)).map((v,i)=> i + 1);
-  expect(new Counter().oneToHundred()).toBe(arr1_100);
+  const counter = new Counter()
+  expect(JSON.stringify(counter.oneToHundred())).toBe(arr1_100);
 });
