@@ -2,9 +2,9 @@
   "name": "fizzbuzz-moroball14",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "tsc src/index.ts --outDir lib/ && node lib/index.js",
+    "start": "tsc src/index.ts --outDir lib/ && node .",
     "test": "jest"
   },
   "repository": {
