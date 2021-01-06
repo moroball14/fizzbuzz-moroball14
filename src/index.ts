@@ -1,11 +1,8 @@
 export class Counter {
-  oneToHundred(): number[]{
-    let num = [];
+  oneToHundred(): void{
     for (let i = 1; i <= 100; i++) {
       console.log(i);
-      num.push(i);
     };
-    return num;
   };
 };
 
