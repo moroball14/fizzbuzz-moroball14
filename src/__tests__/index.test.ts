@@ -1,4 +1,5 @@
 import { Counter } from "../index";
+
 let spyLog: any;
 beforeEach(() => {
   spyLog = jest.spyOn(console, "log");
@@ -7,6 +8,7 @@ afterEach(() => {
   spyLog.mockReset();
   spyLog.mockRestore();
 });
+
 test("output 1 to 100", () => {
   new Counter().outputOneToHundred();
   const mockArray = spyLog.mock.calls;
@@ -15,10 +17,12 @@ test("output 1 to 100", () => {
 
 test("return fizzbuzz", () => {
   const counter = new Counter;
-  expect(counter.returnFizzBuzz(1)).toBe(1);
-  // TODO 以下を返すテストを書きたい
-    // 15の倍数の数だけFizzBuzz
-    // 3の倍数の数だけFizz
-    // 5の倍数の数だけBuzz
-    // それ以外は数値
-})
+  const num = 1;
+  expect(num % 15).not.toBe(0);
+  expect(num % 3).not.toBe(0);
+  expect(num % 5).not.toBe(0);
+  expect(counter.returnFizzBuzz(num * (3 * 5))).toBe('Fizz Buzz');
+  expect(counter.returnFizzBuzz(num * 3)).toBe('Fizz');
+  expect(counter.returnFizzBuzz(num * 5)).toBe('Buzz');
+  expect(counter.returnFizzBuzz(num)).toBe(num);
+});
