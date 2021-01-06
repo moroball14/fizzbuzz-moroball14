@@ -3,7 +3,7 @@ import { Counter } from "../index";
 test("count 1 to 100", () => {
   const spyLog = jest.spyOn(console, "log");
 
-  new Counter().oneToHundred();
+  new Counter().outputOneToHundred();
 
   expect(spyLog.mock.calls).toHaveLength(100);
   Array.from(Array(100).keys()).forEach((i) => {

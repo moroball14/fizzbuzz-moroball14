@@ -1,5 +1,5 @@
 export class Counter {
-  oneToHundred(): void{
+  outputOneToHundred(): void{
     for (let i = 1; i <= 100; i++) {
       console.log(i);
     };
@@ -8,4 +8,4 @@ export class Counter {
 
 let counter = new Counter();
 
-counter.oneToHundred();
+counter.outputOneToHundred();
