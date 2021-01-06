@@ -18,7 +18,7 @@ test("output 1 to 100", () => {
 test("return fizzbuzz", () => {
   const counter = new Counter;
   const num = 1;
-  expect(num % 15).not.toBe(0);
+  expect(num % (3 * 5)).not.toBe(0);
   expect(num % 3).not.toBe(0);
   expect(num % 5).not.toBe(0);
   expect(counter.returnFizzBuzz(num * (3 * 5))).toBe('Fizz Buzz');
