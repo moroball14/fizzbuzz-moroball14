@@ -13,3 +13,13 @@
 # jest install
 % npm i jest @types/jest ts-jest -D
 ```
+
+## 処理実行
+```
+% npm start
+```
+
+## テスト実行
+```
+% npm test
+```
