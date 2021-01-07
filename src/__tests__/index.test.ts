@@ -15,12 +15,16 @@ describe("Counter class test", () => {
   test("return fizzbuzz", () => {
     const counter = new Counter;
     const num = 1;
-    expect(num % 15).not.toBe(0);
-    expect(num % 3).not.toBe(0);
-    expect(num % 5).not.toBe(0);
-    expect(counter.returnFizzBuzz(num * 15)).toBe('Fizz Buzz');
-    expect(counter.returnFizzBuzz(num * 3)).toBe('Fizz');
-    expect(counter.returnFizzBuzz(num * 5)).toBe('Buzz');
-    expect(counter.returnFizzBuzz(num)).toBe(num.toString());
+    for (let i = 1; i <= 100; i++) {
+      if (i % 15 === 0) {
+        expect(counter.returnFizzBuzz(num * i)).toBe('Fizz Buzz');
+      } else if (i % 3 === 0) {
+        expect(counter.returnFizzBuzz(num * i)).toBe('Fizz');
+      } else if (i % 5 === 0) {
+        expect(counter.returnFizzBuzz(num * i)).toBe('Buzz');
+      } else {
+        expect(counter.returnFizzBuzz(num)).toBe(num.toString());
+      };
+    };
   });
-})
+});
