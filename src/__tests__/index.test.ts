@@ -22,11 +22,17 @@ describe("Counter class test", () => {
   });
 
   test("return fizzbuzz", () => {
-    for (let i = 1; i <= 5; i++) {
-      expect(counter.returnFizzBuzz(15 * i)).toBe('Fizz Buzz');
-      if (i % 5 !== 0) expect(counter.returnFizzBuzz(3 * i)).toBe('Fizz');
-      if (i % 3 !== 0) expect(counter.returnFizzBuzz(5 * i)).toBe('Buzz');
-      if (i % 3 !== 0 && i % 5 !== 0) expect(counter.returnFizzBuzz(i)).toBe(i.toString());
+    for (let i = 1; i <= 100; i++) {
+      const result = counter.returnFizzBuzz(i)
+      if (i % 15 === 0) {
+        expect(result).toBe('Fizz Buzz');
+      } else if (i % 3 === 0) {
+        expect(result).toBe('Fizz');
+      } else if (i % 5 === 0) {
+        expect(result).toBe('Buzz');
+      } else {
+        expect(result).toBe(i.toString());
+      };
     };
   });
 });
