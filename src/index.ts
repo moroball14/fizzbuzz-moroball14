@@ -1,11 +1,13 @@
 export class Counter {
   outputOneToHundred(): void {
+    let fizzbuzz: string = '';
     for (let i = 1; i <= 100; i++) {
-      console.log(this.returnFizzBuzz(i));
+      fizzbuzz += `${this.returnFizzBuzz(i)},`;
     };
+    console.log(fizzbuzz.slice(0, -1));
   };
 
-  returnFizzBuzz(number: number): any {
+  returnFizzBuzz(number: number): string {
     let result;
     if (number % (3 * 5) === 0) {
       result = "Fizz Buzz";
@@ -14,7 +16,7 @@ export class Counter {
     } else if (number % 5 === 0) {
       result = "Buzz";
     } else {
-      result = number;
+      result = number.toString();
     };
     return result;
   };
