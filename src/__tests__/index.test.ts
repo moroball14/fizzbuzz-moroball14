@@ -22,7 +22,6 @@ describe("Counter class test", () => {
 
   test("return fizzbuzz", () => {
     const counter = new Counter;
-    const num = 1;
     for (let i = 1; i <= 15; i++) {
       expect(counter.returnFizzBuzz(15 * i)).toBe('Fizz Buzz');
       if (i % 15 !== 0 && i % 5 !== 0) expect(counter.returnFizzBuzz(3 * i)).toBe('Fizz');
