@@ -1,12 +1,12 @@
 import { Counter } from "../index";
 
 describe("Counter class test", () => {
-  const spyLog = jest.spyOn(console, "log");
   afterEach(() => {
     jest.restoreAllMocks();
   });
 
   test("output 1 to 100", () => {
+    const spyLog = jest.spyOn(console, "log");
     new Counter().outputOneToHundred();
     const mockArray = spyLog.mock.calls;
     expect(mockArray).toHaveLength(1);
