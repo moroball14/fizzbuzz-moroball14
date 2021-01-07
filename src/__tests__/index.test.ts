@@ -1,13 +1,14 @@
 import { Counter } from "../index";
 
 describe("Counter class test", () => {
+  const counter = new Counter();
+
   afterEach(() => {
     jest.restoreAllMocks();
   });
 
   test("output 1 to 100", () => {
     const spyLog = jest.spyOn(console, "log");
-    const counter = new Counter()
     let fizzbuzz = '';
     for (let i = 1; i <= 100; i++) {
       fizzbuzz += `${counter.returnFizzBuzz(i)},`;
@@ -21,7 +22,6 @@ describe("Counter class test", () => {
   });
 
   test("return fizzbuzz", () => {
-    const counter = new Counter;
     for (let i = 1; i <= 5; i++) {
       expect(counter.returnFizzBuzz(15 * i)).toBe('Fizz Buzz');
       if (i % 5 !== 0) expect(counter.returnFizzBuzz(3 * i)).toBe('Fizz');
