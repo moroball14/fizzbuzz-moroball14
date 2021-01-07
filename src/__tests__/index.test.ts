@@ -32,4 +32,8 @@ describe("Counter class test", () => {
       };
     };
   });
+
+  test("format fizzbuzz", () => {
+    expect(counter.formatFizzBuzz("test")).toBe("tes");
+  })
 });

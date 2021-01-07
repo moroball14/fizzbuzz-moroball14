@@ -4,7 +4,7 @@ export class Counter {
     for (let i = 1; i <= 100; i++) {
       fizzbuzz += `${this.returnFizzBuzz(i)},`;
     };
-    console.log(fizzbuzz.slice(0, -1));
+    console.log(this.formatFizzBuzz(fizzbuzz));
   };
 
   returnFizzBuzz(number: number): string {
@@ -20,6 +20,10 @@ export class Counter {
     };
     return result;
   };
+
+  formatFizzBuzz(result: string): string {
+    return result.slice(0, -1);
+  }
 };
 
 let counter = new Counter();
