@@ -14,7 +14,6 @@ describe("Counter class test", () => {
     const mockArray = spyLog.mock.calls;
 
     expect(mockArray).toHaveLength(1);
-    expect(typeof mockArray[0][0]).toBe("string");
     expect(mockArray[0][0]).toBe(fizzbuzz);
   });
 
