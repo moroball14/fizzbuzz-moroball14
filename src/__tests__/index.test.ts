@@ -13,7 +13,7 @@ describe("Counter class test", () => {
     counter.outputOneToHundred();
     const mockArray = spyLog.mock.calls;
 
-    expect(mockArray).toHaveLength(1);
+    expect(spyLog).toHaveBeenCalledTimes(1);
     expect(mockArray[0][0]).toBe(fizzbuzz);
   });
 
