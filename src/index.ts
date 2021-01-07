@@ -9,7 +9,7 @@ export class Counter {
 
   returnFizzBuzz(number: number): string {
     let result;
-    if (number % (3 * 5) === 0) {
+    if (number % 15 === 0) {
       result = "Fizz Buzz";
     } else if (number % 3 === 0) {
       result = "Fizz";
