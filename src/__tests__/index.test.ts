@@ -1,6 +1,6 @@
 import { Counter } from "../index";
 
-describe("Counter class test",()=>{
+describe("Counter class test", () => {
   const spyLog = jest.spyOn(console, "log");
   afterEach(() => {
     jest.restoreAllMocks();
@@ -9,7 +9,7 @@ describe("Counter class test",()=>{
   test("output 1 to 100", () => {
     new Counter().outputOneToHundred();
     const mockArray = spyLog.mock.calls;
-    expect(mockArray).toHaveLength(100);
+    expect(mockArray).toHaveLength(1);
   });
 
   test("return fizzbuzz", () => {
@@ -21,6 +21,6 @@ describe("Counter class test",()=>{
     expect(counter.returnFizzBuzz(num * 15)).toBe('Fizz Buzz');
     expect(counter.returnFizzBuzz(num * 3)).toBe('Fizz');
     expect(counter.returnFizzBuzz(num * 5)).toBe('Buzz');
-    expect(counter.returnFizzBuzz(num)).toBe(num);
+    expect(counter.returnFizzBuzz(num)).toBe(num.toString());
   });
 })
