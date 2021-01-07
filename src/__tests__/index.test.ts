@@ -24,9 +24,9 @@ describe("Counter class test", () => {
     const counter = new Counter;
     for (let i = 1; i <= 15; i++) {
       expect(counter.returnFizzBuzz(15 * i)).toBe('Fizz Buzz');
-      if (i % 15 !== 0 && i % 5 !== 0) expect(counter.returnFizzBuzz(3 * i)).toBe('Fizz');
-      if (i % 15 !== 0 && i % 3 !== 0) expect(counter.returnFizzBuzz(5 * i)).toBe('Buzz');
-      if (i % 15 !== 0 && i % 3 !== 0 && i % 5 !== 0) expect(counter.returnFizzBuzz(i)).toBe(i.toString());
+      if (i % 5 !== 0) expect(counter.returnFizzBuzz(3 * i)).toBe('Fizz');
+      if (i % 3 !== 0) expect(counter.returnFizzBuzz(5 * i)).toBe('Buzz');
+      if (i % 3 !== 0 && i % 5 !== 0) expect(counter.returnFizzBuzz(i)).toBe(i.toString());
     };
   });
 });
