@@ -8,17 +8,10 @@ export class FizzBuzz {
   };
 
   returnValue(number: number): string {
-    let result;
-    if (number % 15 === 0) {
-      result = "Fizz Buzz";
-    } else if (number % 3 === 0) {
-      result = "Fizz";
-    } else if (number % 5 === 0) {
-      result = "Buzz";
-    } else {
-      result = number.toString();
-    };
-    return result;
+    if (number % 15 === 0) return "Fizz Buzz";
+    if (number % 3 === 0) return "Fizz";
+    if (number % 5 === 0) return "Buzz";
+    return number.toString();
   };
 
   formatValue(result: string): string {
