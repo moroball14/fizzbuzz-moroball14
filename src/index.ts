@@ -1,4 +1,4 @@
-export class Counter {
+export class FizzBuzz {
   outputOneToHundred(): void {
     let fizzbuzz: string = '';
     for (let i = 1; i <= 100; i++) {
@@ -26,6 +26,6 @@ export class Counter {
   }
 };
 
-let counter = new Counter();
+let counter = new FizzBuzz();
 
 counter.outputOneToHundred();

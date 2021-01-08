@@ -1,7 +1,7 @@
-import { Counter } from "../index";
+import { FizzBuzz } from "../index";
 
 describe("Counter class test", () => {
-  const counter = new Counter();
+  const counter = new FizzBuzz();
 
   afterEach(() => {
     jest.restoreAllMocks();
