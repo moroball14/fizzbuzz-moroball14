@@ -1,6 +1,6 @@
 import { FizzBuzz } from "../index";
 
-describe("Counter class test", () => {
+describe("FizzBuzz class test", () => {
   const fizzbuzz = new FizzBuzz();
 
   afterEach(() => {
