@@ -26,6 +26,6 @@ export class FizzBuzz {
   }
 };
 
-let counter = new FizzBuzz();
+let fizzbuzz = new FizzBuzz();
 
-counter.outputValue();
+fizzbuzz.outputValue();
