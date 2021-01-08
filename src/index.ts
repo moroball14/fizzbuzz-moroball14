@@ -1,13 +1,13 @@
 export class FizzBuzz {
-  outputOneToHundred(): void {
+  outputValue(): void {
     let fizzbuzz: string = '';
     for (let i = 1; i <= 100; i++) {
-      fizzbuzz += `${this.returnFizzBuzz(i)},`;
+      fizzbuzz += `${this.returnValue(i)},`;
     };
-    console.log(this.formatFizzBuzz(fizzbuzz));
+    console.log(this.formatValue(fizzbuzz));
   };
 
-  returnFizzBuzz(number: number): string {
+  returnValue(number: number): string {
     let result;
     if (number % 15 === 0) {
       result = "Fizz Buzz";
@@ -21,11 +21,11 @@ export class FizzBuzz {
     return result;
   };
 
-  formatFizzBuzz(result: string): string {
+  formatValue(result: string): string {
     return result.slice(0, -1);
   }
 };
 
 let counter = new FizzBuzz();
 
-counter.outputOneToHundred();
+counter.outputValue();
