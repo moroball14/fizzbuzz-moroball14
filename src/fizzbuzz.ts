@@ -25,7 +25,3 @@ export class FizzBuzz {
     return result.slice(0, -1);
   }
 };
-
-let fizzbuzz = new FizzBuzz();
-
-fizzbuzz.outputValue();

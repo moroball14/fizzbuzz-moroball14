@@ -1,4 +1,4 @@
-import { FizzBuzz } from "../index";
+import { FizzBuzz } from "../fizzbuzz";
 
 describe("FizzBuzz class test", () => {
   const fizzbuzz = new FizzBuzz();
