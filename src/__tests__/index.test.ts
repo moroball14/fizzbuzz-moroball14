@@ -20,15 +20,10 @@ describe("FizzBuzz class test", () => {
   test("should return values according to the fizzbuzz rules", () => {
     for (let i = 1; i <= 100; i++) {
       const result = fizzbuzz.returnValue(i)
-      if (i % 15 === 0) {
-        expect(result).toBe('Fizz Buzz');
-      } else if (i % 3 === 0) {
-        expect(result).toBe('Fizz');
-      } else if (i % 5 === 0) {
-        expect(result).toBe('Buzz');
-      } else {
-        expect(result).toBe(i.toString());
-      };
+      if (i % 15 === 0) expect(result).toBe('Fizz Buzz');
+      else if (i % 3 === 0) expect(result).toBe('Fizz');
+      else if (i % 5 === 0) expect(result).toBe('Buzz');
+      else expect(result).toBe(i.toString());
     };
   });
 
