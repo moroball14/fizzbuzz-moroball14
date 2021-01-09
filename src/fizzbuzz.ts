@@ -5,6 +5,10 @@ export class FizzBuzz {
     console.log(this.formatValue(fizzbuzz));
   };
 
+  conversion(numbers: Array<number>): Array<string> {
+    return numbers.map(num => this.returnValue(num));
+  }
+
   returnValue(number: number): string {
     if (number % 15 === 0) return "Fizz Buzz";
     if (number % 3 === 0) return "Fizz";
@@ -14,9 +18,5 @@ export class FizzBuzz {
 
   formatValue(results: Array<string>): string {
     return results.join(",");
-  }
-
-  conversion(numbers: Array<number>) {
-    return numbers.map(num => this.returnValue(num));
   }
 };

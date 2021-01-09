@@ -27,7 +27,7 @@ describe("FizzBuzz class test", () => {
     };
   });
 
-  test("last character must be deleted", () => {
-    expect(fizzbuzz.formatValue("test")).toBe("tes");
-  });
+  // test("last character must be deleted", () => {
+  //   expect(fizzbuzz.formatValue("test")).toBe("tes");
+  // });
 });
