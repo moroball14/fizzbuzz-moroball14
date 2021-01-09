@@ -1,9 +1,7 @@
 export class FizzBuzz {
   outputValue(): void {
-    let fizzbuzz: string = '';
-    for (let i = 1; i <= 100; i++) {
-      fizzbuzz += `${this.returnValue(i)},`;
-    };
+    const numbers1_100: Array<number> = Array.from(new Array(100).keys()).map((i)=> i + 1);
+    const fizzbuzz: Array<string> = this.conversion(numbers1_100);
     console.log(this.formatValue(fizzbuzz));
   };
 
@@ -14,7 +12,11 @@ export class FizzBuzz {
     return number.toString();
   };
 
-  formatValue(result: string): string {
-    return result.slice(0, -1);
+  formatValue(results: Array<string>): string {
+    return results.join(",");
+  }
+
+  conversion(numbers: Array<number>) {
+    return numbers.map(num => this.returnValue(num));
   }
 };
