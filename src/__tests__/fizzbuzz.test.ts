@@ -1,7 +1,7 @@
-import { FizzBuzz } from "../fizzbuzz";
+import { Fizzbuzz } from "../fizzbuzz";
 
 describe("FizzBuzz class test", () => {
-  const fizzbuzz = new FizzBuzz();
+  const fizzbuzz = new Fizzbuzz();
 
   afterEach(() => {
     jest.restoreAllMocks();

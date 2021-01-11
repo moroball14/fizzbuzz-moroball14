@@ -1,4 +1,4 @@
-export class FizzBuzz {
+export class Fizzbuzz {
   public outputValue(): void {
     const numbers1_100: Array<number> = Array.from(new Array(100).keys()).map((i)=> i + 1);
     const fizzbuzz: Array<string> = this.conversion(numbers1_100);

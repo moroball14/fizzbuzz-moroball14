@@ -1,4 +1,4 @@
-import { FizzBuzz } from "./fizzbuzz";
+import { Fizzbuzz } from "./fizzbuzz";
 
-let fizzbuzz = new FizzBuzz();
+let fizzbuzz = new Fizzbuzz();
 fizzbuzz.outputValue();
