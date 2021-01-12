@@ -32,7 +32,7 @@ describe("Fizzbuzz class test", () => {
   describe("returnValue", () => {
     test("should return values according to the fizzbuzz rules", () => {
       for (let i = 1; i <= 100; i++) {
-        const result = fizzbuzz["returnValue"](i)
+        const result = fizzbuzz["returnValue"](i);
         if (i % 15 === 0) expect(result).toBe("Fizz Buzz");
         else if (i % 3 === 0) expect(result).toBe("Fizz");
         else if (i % 5 === 0) expect(result).toBe("Buzz");
@@ -43,7 +43,7 @@ describe("Fizzbuzz class test", () => {
 
   describe("formatValue", () => {
     test("must make the number of commas greater than the length of the array", () => {
-      const array = ["1", "2", "3", "4", "5"]
+      const array = ["1", "2", "3", "4", "5"];
       const formatedToString = fizzbuzz["formatValue"](array);
       let commaCount = 0;
       for (let i = 0; i < formatedToString.length; i++){

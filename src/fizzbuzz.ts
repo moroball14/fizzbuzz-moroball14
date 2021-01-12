@@ -7,7 +7,7 @@ export class Fizzbuzz {
 
   private conversion(numbers: Array<number>): Array<string> {
     return numbers.map(num => this.returnValue(num));
-  }
+  };
 
   private returnValue(number: number): string {
     if (number % 15 === 0) return "Fizz Buzz";
@@ -18,5 +18,5 @@ export class Fizzbuzz {
 
   private formatValue(results: Array<string>): string {
     return results.join(",");
-  }
+  };
 };
