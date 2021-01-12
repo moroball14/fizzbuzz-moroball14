@@ -30,7 +30,7 @@ describe("Fizzbuzz class test", () => {
   });
 
   describe("formatValue", () => {
-    test("must make the number of commas greater than the length of the array", () => {
+    test("must make the number of commas greater than the length of the array and equal strings", () => {
       const array = ["1", "2", "3", "4", "5"];
       const formatedToString = fizzbuzz["formatValue"](array);
       const minCommaCount = array.length - 1;
@@ -43,6 +43,7 @@ describe("Fizzbuzz class test", () => {
 
       // 配列の要素一つにも文字列としてのカンマ(,)が含まれる可能性があるため、toBeではなくtoBeGreaterThanOrEqual
       expect(commaCount).toBeGreaterThanOrEqual(minCommaCount);
+      expect(formatedToString).toBe("1,2,3,4,5");
     });
   });
 
