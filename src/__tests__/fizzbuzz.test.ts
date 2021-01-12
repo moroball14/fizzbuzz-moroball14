@@ -33,15 +33,15 @@ describe("Fizzbuzz class test", () => {
     test("must make the number of commas greater than the length of the array", () => {
       const array = ["1", "2", "3", "4", "5"];
       const formatedToString = fizzbuzz["formatValue"](array);
-      let commaCount = 0;
-      for (let i = 0; i < formatedToString.length; i++) {
-        if (formatedToString[i] == ",") {
-          commaCount++;
-        }
-      }
       const minCommaCount = array.length - 1;
+      let commaCount = 0;
 
-      // 文字列に,が含まれる可能性があるため、toBeではなくtoBeGreaterThanOrEqual
+      // 文字列に含まれるカンマの数を数える
+      for (let i = 0; i < formatedToString.length; i++) {
+        if (formatedToString[i] == ",") commaCount++;
+      }
+
+      // 配列の要素一つにも文字列としてのカンマ(,)が含まれる可能性があるため、toBeではなくtoBeGreaterThanOrEqual
       expect(commaCount).toBeGreaterThanOrEqual(minCommaCount);
     });
   });
