@@ -1,10 +1,12 @@
 export class Fizzbuzz {
-  public outputValue(): void {
+  // public method
+  public print(): void {
     const numbers1_100: Array<number> = Array.from(new Array(100).keys()).map((i)=> i + 1);
     const fizzbuzz: Array<string> = this.conversion(numbers1_100);
     console.log(this.formatValue(fizzbuzz));
   };
 
+  // private method
   private conversion(numbers: Array<number>): Array<string> {
     return numbers.map(num => this.returnValue(num));
   };
