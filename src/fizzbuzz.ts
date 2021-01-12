@@ -11,14 +11,14 @@ export class Fizzbuzz {
     return numbers.map(num => this.returnValue(num));
   };
 
+  private formatValue(results: Array<string>): string {
+    return results.join(",");
+  };
+
   private returnValue(number: number): string {
     if (number % 15 === 0) return "Fizz Buzz";
     if (number % 3 === 0) return "Fizz";
     if (number % 5 === 0) return "Buzz";
     return number.toString();
-  };
-
-  private formatValue(results: Array<string>): string {
-    return results.join(",");
   };
 };
