@@ -34,9 +34,9 @@ describe("Fizzbuzz class test", () => {
       const array = ["1", "2", "3", "4", "5"];
       const formatedToString = fizzbuzz["formatValue"](array);
       let commaCount = 0;
-      for (let i = 0; i < formatedToString.length; i++){
-        if (formatedToString[i] == ","){
-          commaCount ++;
+      for (let i = 0; i < formatedToString.length; i++) {
+        if (formatedToString[i] == ",") {
+          commaCount++;
         }
       }
       const minCommaCount = array.length - 1;

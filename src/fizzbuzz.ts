@@ -1,7 +1,7 @@
 export class Fizzbuzz {
   // public method
   public print(): void {
-    const numbers1_100: Array<number> = Array.from(new Array(100).keys()).map((i)=> i + 1);
+    const numbers1_100: Array<number> = Array.from(new Array(100).keys()).map((i) => i + 1);
     const fizzbuzz: Array<string> = this.conversion(numbers1_100);
     console.log(this.formatValue(fizzbuzz));
   };
