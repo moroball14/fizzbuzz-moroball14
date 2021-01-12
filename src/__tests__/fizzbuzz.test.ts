@@ -1,6 +1,6 @@
 import { Fizzbuzz } from "../fizzbuzz";
 
-describe("FizzBuzz class test", () => {
+describe("Fizzbuzz class test", () => {
   const fizzbuzz = new Fizzbuzz();
 
   afterEach(() => {
@@ -20,8 +20,12 @@ describe("FizzBuzz class test", () => {
   });
 
   describe("conversion", () => {
-    test("must be conversion to fizzbuzz array from number array", () => {
-      // TODO conversionのテストを書く
+    test("prop and return value must be equal in length", () => {
+      const numbers = [1, 2, 3, 4, 5];
+      const toStrings = fizzbuzz["conversion"](numbers);
+      const arrayLength = 5;
+      expect(numbers).toHaveLength(arrayLength);
+      expect(toStrings).toHaveLength(arrayLength);
     });
   });
 
@@ -38,8 +42,18 @@ describe("FizzBuzz class test", () => {
   });
 
   describe("formatValue", () => {
-    test("should format prop to string from array", () => {
-    // TODO formatValueのテストを書く
+    test("must make the number of commas greater than the length of the array", () => {
+      const array = ["1", "2", "3", "4", "5"]
+      const formatedToString = fizzbuzz["formatValue"](array);
+      let commacount = 0;
+      for (let i = 0; i < formatedToString.length; i++){
+        if (formatedToString[i] == ","){
+          commacount ++;
+        }
+      }
+      const minCommaCount = array.length - 1;
+
+      expect(commacount).toBeGreaterThanOrEqual(minCommaCount);
     });
   });
 });
