@@ -1,4 +1,4 @@
 import { Fizzbuzz } from "./fizzbuzz";
 
-let fizzbuzz = new Fizzbuzz();
+const fizzbuzz = new Fizzbuzz();
 fizzbuzz.print();
