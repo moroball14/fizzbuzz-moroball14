@@ -23,9 +23,7 @@ describe("Fizzbuzz class test", () => {
     test("prop and return value must be equal in length", () => {
       const numbers = [1, 2, 3, 4, 5];
       const toStringArray = fizzbuzz["conversion"](numbers);
-      const arrayLength = 5;
-      expect(numbers).toHaveLength(arrayLength);
-      expect(toStringArray).toHaveLength(arrayLength);
+      expect(toStringArray).toEqual(["1", "2", "Fizz", "4", "Buzz"]);
     });
   });
 
