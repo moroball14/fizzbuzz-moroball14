@@ -37,19 +37,19 @@ describe("Fizzbuzz class test", () => {
 
   describe("returnValue", () => {
     test.each`
-      prop  | expected
-      ${1}  | ${"1"}
+      prop   | expected
+      ${1}   | ${"1"}
       ${49}  | ${"49"}
       ${98}  | ${"98"}
-      ${3}  | ${"Fizz"}
+      ${3}   | ${"Fizz"}
       ${51}  | ${"Fizz"}
       ${99}  | ${"Fizz"}
-      ${5}  | ${"Buzz"}
+      ${5}   | ${"Buzz"}
       ${50}  | ${"Buzz"}
-      ${100}  | ${"Buzz"}
-      ${15} | ${"Fizz Buzz"}
-      ${45} | ${"Fizz Buzz"}
-      ${90} | ${"Fizz Buzz"}
+      ${100} | ${"Buzz"}
+      ${15}  | ${"Fizz Buzz"}
+      ${45}  | ${"Fizz Buzz"}
+      ${90}  | ${"Fizz Buzz"}
     `("must returns $expected if input is $prop", ({ prop, expected }) => {
       expect(fizzbuzz["returnValue"](prop)).toBe(expected);
     });
