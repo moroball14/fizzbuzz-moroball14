@@ -48,14 +48,22 @@ describe("Fizzbuzz class test", () => {
   });
 
   describe("returnValue", () => {
-    test("should return values according to the fizzbuzz rules", () => {
-      for (let i = 1; i <= 100; i++) {
-        const result = fizzbuzz["returnValue"](i);
-        if (i % 15 === 0) expect(result).toBe("Fizz Buzz");
-        else if (i % 3 === 0) expect(result).toBe("Fizz");
-        else if (i % 5 === 0) expect(result).toBe("Buzz");
-        else expect(result).toBe(i.toString());
-      };
+    test.each`
+      prop  | expected
+      ${1}  | ${"1"}
+      ${49}  | ${"49"}
+      ${98}  | ${"98"}
+      ${3}  | ${"Fizz"}
+      ${51}  | ${"Fizz"}
+      ${99}  | ${"Fizz"}
+      ${5}  | ${"Buzz"}
+      ${50}  | ${"Buzz"}
+      ${100}  | ${"Buzz"}
+      ${15} | ${"Fizz Buzz"}
+      ${45} | ${"Fizz Buzz"}
+      ${90} | ${"Fizz Buzz"}
+    `("must returns $expected if input is $prop", ({ prop, expected }) => {
+      expect(fizzbuzz["returnValue"](prop)).toBe(expected);
     });
   });
 });
