@@ -20,7 +20,7 @@ describe("Fizzbuzz class test", () => {
   });
 
   describe("conversion", () => {
-    test("prop and return value must be equal in length", () => {
+    test("must return fizzbuzz array", () => {
       const numbers = [1, 2, 3, 4, 5];
       const toStringArray = fizzbuzz["conversion"](numbers);
       expect(toStringArray).toEqual(["1", "2", "Fizz", "4", "Buzz"]);
