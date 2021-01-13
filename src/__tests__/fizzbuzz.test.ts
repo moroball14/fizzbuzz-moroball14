@@ -28,7 +28,7 @@ describe("Fizzbuzz class test", () => {
   });
 
   describe("formatValue", () => {
-    test("must make the number of commas greater than the length of the array and equal strings", () => {
+    test("must change type to strings from array", () => {
       const array = ["1", "2", "3", "4", "5"];
       const formatedToString = fizzbuzz["formatValue"](array);
       expect(formatedToString).toBe("1,2,3,4,5");
