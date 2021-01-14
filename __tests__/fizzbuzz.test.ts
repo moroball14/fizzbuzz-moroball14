@@ -1,4 +1,4 @@
-import { Fizzbuzz } from "../fizzbuzz";
+import { Fizzbuzz } from "../src/fizzbuzz";
 
 describe("Fizzbuzz class test", () => {
   const fizzbuzz = new Fizzbuzz();
