@@ -19,11 +19,11 @@ describe("Fizzbuzz class test", () => {
     });
   });
 
-  describe("conversion", () => {
+  describe("convert", () => {
     test("must return fizzbuzz strings", () => {
       const prop = [1, 2, 3, 4, 5];
       const expected = "1,2,Fizz,4,Buzz";
-      expect(fizzbuzz["conversion"](prop)).toEqual(expected);
+      expect(fizzbuzz["convert"](prop)).toEqual(expected);
     });
   });
 
@@ -35,7 +35,7 @@ describe("Fizzbuzz class test", () => {
     });
   });
 
-  describe("returnValue", () => {
+  describe("convertToFizzBuzz", () => {
     // 同値分割を用いた(inputに対して①数値②Fizz③Buzz④Fizz Buzzを返すグループに分けた)
     test.each`
       prop   | expected
@@ -52,7 +52,7 @@ describe("Fizzbuzz class test", () => {
       ${45}  | ${"Fizz Buzz"}
       ${90}  | ${"Fizz Buzz"}
     `("must returns $expected if input is $prop", ({ prop, expected }) => {
-      expect(fizzbuzz["returnValue"](prop)).toBe(expected);
+      expect(fizzbuzz["convertToFizzBuzz"](prop)).toBe(expected);
     });
   });
 });
