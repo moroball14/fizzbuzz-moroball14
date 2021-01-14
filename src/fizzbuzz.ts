@@ -13,8 +13,9 @@ export class Fizzbuzz {
     return fizzbuzzStrings;
   };
 
-  private formatValue(results: Array<string>): string {
-    return results.join(",");
+  readonly DEFAULT_SEPARATOR: string = ",";
+  private formatValue(results: Array<string>, separator: string = this.DEFAULT_SEPARATOR): string {
+    return results.join(separator);
   };
 
   private returnValue(number: number): string {
