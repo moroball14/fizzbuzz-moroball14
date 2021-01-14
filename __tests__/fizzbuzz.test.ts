@@ -22,7 +22,7 @@ describe("Fizzbuzz class test", () => {
   describe("conversion", () => {
     test("must return fizzbuzz strings", () => {
       const prop = [1, 2, 3, 4, 5];
-      const expected = "1,2,Fizz,4,Buzz"
+      const expected = "1,2,Fizz,4,Buzz";
       expect(fizzbuzz["conversion"](prop)).toEqual(expected);
     });
   });
