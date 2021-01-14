@@ -36,6 +36,7 @@ describe("Fizzbuzz class test", () => {
   });
 
   describe("returnValue", () => {
+    // 同値分割を用いた(inputに対して①数値②Fizz③Buzz④Fizz Buzzを返すグループに分けた)
     test.each`
       prop   | expected
       ${1}   | ${"1"}
