@@ -20,10 +20,10 @@ describe("Fizzbuzz class test", () => {
   });
 
   describe("conversion", () => {
-    test("must return fizzbuzz array", () => {
-      const numbers = [1, 2, 3, 4, 5];
-      const toStringArray = fizzbuzz["conversion"](numbers);
-      expect(toStringArray).toEqual(["1", "2", "Fizz", "4", "Buzz"]);
+    test("must return fizzbuzz strings", () => {
+      const prop = [1, 2, 3, 4, 5];
+      const expected = "1,2,Fizz,4,Buzz"
+      expect(fizzbuzz["conversion"](prop)).toEqual(expected);
     });
   });
 

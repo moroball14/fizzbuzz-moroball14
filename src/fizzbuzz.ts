@@ -2,13 +2,15 @@ export class Fizzbuzz {
   // public method
   public print(): void {
     const numbers1_100: Array<number> = Array.from(new Array(100).keys()).map((i) => i + 1);
-    const fizzbuzz: Array<string> = this.conversion(numbers1_100);
-    console.log(this.formatValue(fizzbuzz));
+    const fizzbuzz: string = this.conversion(numbers1_100);
+    console.log(fizzbuzz);
   };
 
   // private method
-  private conversion(numbers: Array<number>): Array<string> {
-    return numbers.map(num => this.returnValue(num));
+  private conversion(numbers: Array<number>): string {
+    const fizzbuzzArray = numbers.map(num => this.returnValue(num));
+    const fizzbuzzStrings = this.formatValue(fizzbuzzArray);
+    return fizzbuzzStrings;
   };
 
   private formatValue(results: Array<string>): string {
